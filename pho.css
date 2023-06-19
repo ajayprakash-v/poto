@@ -1,0 +1,666 @@
+
+@font-face{
+	src: url('fonts/f1.ttf');
+	font-family: f1;
+}
+@font-face{
+	src: url('fonts/f2.ttf');
+	font-family: f2;
+}
+body{
+	width: 100%;
+	overflow-x: hidden;
+	height: 100%;
+	overflow-y: hidden;
+}
+.active-scrollbar{
+	overflow-y:scroll ;
+}
+::-webkit-scrollbar{
+	width: .4vw;
+	background-color:rgba(25,25,25)
+}
+::-webkit-scrollbar-track{
+	background-color:#D0E400 ;
+	border-radius: 10vw;
+	margin-block: 1rem;
+}
+::-webkit-scrollbar-thumb{
+	background-color:gray ;
+	border-radius: 100vw;
+}
+
+#main{
+	width: 100%;
+	display: flex;
+	height: 100vh;
+	max-width:100%;
+	overflow-x: hidden;
+}
+#sec2{
+	width: 100%;
+	height: 100vh;
+	background-color:rgba(25,25,25);
+}
+#sec1{
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(25,25,25);
+}
+#lr1,#lr2{
+	width: 25vw;
+	height: 25vw;
+}
+#lr1{
+	transform: rotate(-5deg);
+	animation: downimage2 1.5s;
+}
+#lr2{
+	transform: rotate(5deg);
+	animation: downimage3 1.5s;
+}
+#fr1{
+	position: absolute;
+	width: 55vw;
+	height: 40vw;
+	z-index: 1;
+	border-radius: 10px;
+	animation: downimage1 1.5s;
+}
+@keyframes downimage1{
+	0%{
+		transform: translateY(0px);
+	}
+	50%{
+		transform: translateY(-200px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+@keyframes downimage2{
+	0%{
+		transform: translateY(0px);
+		rotate: -5deg;
+	}
+	50%{
+		transform: translateY(-100px);
+		rotate: 10deg;
+	}
+	100%{
+		transform: translateY(0px);
+		rotate: -5deg;
+	}
+}
+@keyframes downimage3{
+	0%{
+		transform: translateY(0px);
+		rotate: 5deg;
+	}
+	50%{
+		transform: translateY(-100px);
+		rotate: -10deg;
+	}
+	100%{
+		transform: translateY(0px);
+		rotate: 5deg;
+	}
+}
+
+#sec1 h1{
+	position: absolute;
+	z-index: 2;
+	color: white;
+	font-family: f1;
+	font-size:10vw;
+	margin-left: 5%;
+	animation: head1 10s;
+}
+@keyframes head1{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;	
+	}
+}
+#sec1{
+	position: relative;
+}
+#ex{
+	position: absolute;
+	z-index: 3;
+	color: white;
+	bottom: 20px;
+	font-family: f2;
+	font-size: 2vw;
+}
+#sec1 h6{
+	cursor: pointer;
+}
+
+#centerimg{
+	width: 25vw;
+	position: relative;
+	right: -700px;	
+}
+#sec2center h1{
+	position: absolute;
+	z-index: 1;
+	color: white;
+	width: 50vw;
+	text-align: center;
+	font-family: f1;
+	font-size: 3vw;
+	right: -700px;
+
+}
+#sec2center p{
+	position: absolute;
+	z-index: 1;
+	color: #D0E400;
+	margin-top: 10vw;
+	width: 30vw;
+	font-size: 1.1vw;
+	right: -700px;
+	text-align: center;
+}
+#sec2 h3{
+	text-align: center;
+	color: white;
+	font-family: f2;
+	margin-top: 5%;
+	right: -700px;
+}
+#sec2{
+	position: absolute;
+	z-index: -1;
+}
+#lets{
+	position: absolute;
+	bottom: 2vw;
+	text-align: center;
+	font-size: 2vw;
+}
+#sign{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+}
+.movehead1{
+	transform: translateX(-400px);
+	transition: 1.5s;
+}
+.movelr2{
+	transform: translateX(-200px);
+	transition: 2.5s;
+}
+.move{
+	transition: 1s;
+	transform: translateX(-100%);
+}
+#empty{
+	width: 100%;
+	height: 50vh;
+	background-color:rgba(25,25,25) ;
+}
+#sec3{
+	background-color:rgba(25,25,25) ;
+	width: 100%;
+}
+#sec3 h1{
+	text-align: center;
+	font-family: f1;
+	color: white;
+	font-size: 8vw;
+	margin:0;
+}
+#sec3 h3{
+	text-align: center;
+	font-family: f1;
+	color: white;
+	font-size: 3vw;
+	margin:0;
+}
+#sec3 p{
+	color: #D0E400;
+	text-align: center;
+	font-size: 1vw;
+}
+#g1,#g2{
+	margin-top: 50px;
+	width: 20vw;
+	margin-bottom: 50px;
+}
+#g1{
+	transform: rotate(5deg);
+	transition: 1s;
+}
+#g1:hover{
+	transform: rotate(10deg);
+}
+#g2{
+	transform: rotate(-5deg);
+	transition: 1s;
+}
+#g2:hover{
+	transform: rotate(-10deg);
+}
+#gc,#gc2{
+	width: 25vw;
+}
+#me{
+	position: relative;
+}
+#me h5{
+	position: absolute;
+	top: -2.5vw;
+	left: -1.5vw;
+	font-size: 5vw;
+	margin: 0;
+	font-family: f1;
+	color: white;
+	width: 20vw;
+}
+#me h4{
+	font-size: 7vw;
+	width: 32vw;
+	font-family: f1;
+	position: absolute;
+	color: white;
+	bottom: 0;
+	left: 0;
+}
+#gc2{
+	position: absolute;
+}
+#myworld{
+	margin-left: 10vw;
+}
+#g3{
+	width: 20vw;
+	transform: rotate(-3deg);
+	transition: 1s;
+}
+#g3:hover{
+	transform: rotate(-10deg);
+}
+video{
+	width: 23vw;
+	transform: rotate(5deg);
+	transition: 1s;
+}
+video:hover{
+	transform: rotate(10deg);
+}
+#gc,#gc2{
+	filter: saturate(60%);
+	transition: 1s;
+
+}
+#gc2:hover{
+	filter:saturate(100%);
+}
+#sec4{
+	height: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	background-color: rgb(25, 25, 25);
+	position: relative;
+	z-index: 1;
+	transform: translateY(16vw);
+	color: white;
+
+}
+#mystorybox,#inspibox{
+	border: 1px solid #D0E400;
+	position: relative;
+	width: 25vw;
+	height: 38vw;
+	margin-left: 15vw;
+}
+#mystory img{
+	width: 25vw;
+	height: 38vw;
+	position: absolute;
+	left: 2vw;
+	top: 2vw;
+}
+#inspibox img{
+	width: 25vw;
+	height: 38vw;
+	position: absolute;
+	left: 2vw;
+	top: 2vw;
+}
+#mystory h1{
+	position: absolute;
+	font-family: f1;
+	left: -7vw;
+	bottom: 3vw;
+	font-size: 5vw;
+}
+#inspibox h1{
+	position: absolute;
+	font-family: f1;
+	left: -7vw;
+	bottom: 3vw;
+	font-size: 5vw;
+}
+#mystory p{
+	transform: translateX(25vw);
+	width: 20vw;
+	margin-left: 5vw;
+	margin-top: 10vw;
+	font-size: 1vw;
+}
+#inspibox p{
+	transform: translateX(25vw);
+	width: 20vw;
+	margin-left: 5vw;
+	margin-top: 10vw;
+	font-size: 1vw;
+}
+#mystory em{
+	font-size: 1.3vw;
+	color: #d0e400;
+}
+#inspibox em{
+	font-size: 1.3vw;
+	color: #d0e400;
+}
+#inspibox{
+	transform: translateX(30vw);
+}
+#mi{
+	width: 200%;
+}
+.moveright{
+	transform: translateX(-70vw);
+	transition: 1s;
+}
+.moveleft{
+	transform: translateX(0vw);
+	transition: 1s;	
+}
+@keyframes fa{
+	0%{
+		transform: skew(0deg);
+		translate: 0px;
+	}
+	50%{
+		transform: skew(-15deg,15deg);
+		translate: -100px;
+	}
+	100%{
+		transform: skew(0deg);
+		translate: 0px;
+	}
+}
+@keyframes fb{
+	0%{
+		transform: skew(0deg);
+		translate: 0px;
+	}
+	50%{
+		transform: skew(15deg,-15deg);
+		translate: -100px;
+	}
+	100%{
+		transform: skew(0deg);
+		translate: 0px;
+	}
+}
+.skewanimation{
+	animation: fa 1s;
+}
+.skewanimationright{
+	animation: fb 1s;
+}
+#sec5{
+	padding-top: 5vw;
+	background-color: rgb(25,25,25);
+	color: #d0e400;
+	height: 60vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+#sec5 p{
+	text-align: center;
+	width: 40vw;
+	font-size: 1.5vw;
+}
+#sec5 a{
+	text-decoration: none;
+	color: white;
+}
+#sec6{
+	width: 100%;
+	height: 50vw;
+	background-color: rgb(25, 25, 25);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#editphotos{
+	background-color: rba(25,25,25);
+	width: 80%;
+	max-width: 80%;
+	overflow: hidden;
+	height: 45vw;
+}
+#photorow1{
+	display: flex;
+	width: 110%;
+	height: 25%;
+	background-color: red;
+}
+#photo1{
+	width: 25%;
+	height: 100%;
+	background-color: black;
+	max-width: 25%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s ;
+}
+#photo1:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#editphotos{
+	position: relative;
+}
+#photo2{
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	max-width: 50%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 1s;
+}
+#photo2:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#photo3{
+	width: 25%;
+	height: 100%;
+	background-color: black;
+	max-width: 25%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 2s;
+}
+#photo3:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#p1,#p2,#p3{
+	width: 110%;
+}
+#photorow2{
+	display: flex;
+	width: 110%;
+	height: 50%;
+	background-color: red;
+}
+#photo4{
+	width: 25%;
+	height: 100%;
+	background-color: black;
+	max-width: 25%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 3s;
+}
+#photo4:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#photo5{
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	max-width: 50%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 4s;
+}
+#photo5:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#photo6{
+	width: 25%;
+	height: 100%;
+	background-color: black;
+	max-width: 25%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 5s;
+}
+#photo6:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#p4,#p5,#p6{
+	width: 110%;
+}
+#photorow3{
+	display: flex;
+	width: 110%;
+	height: 25%;
+	background-color: red;
+}
+#photo7{
+	width: 25%;
+	height: 100%;
+	background-color: black;
+	max-width: 25%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 6s;
+}
+#photo7:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#photo8{
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	max-width: 50%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 7s;
+}
+#photo8:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#photo9{
+	width: 25%;
+	height: 100%;
+	background-color: black;
+	max-width: 25%;
+	overflow: hidden;
+	border: 10px solid rgb(25, 25, 25);
+	filter: brightness(50%);
+	animation: blink 1s;
+	animation-delay: 8s;
+}
+#photo9:hover{
+	filter: brightness(100%);
+	transition: .5s;	
+}
+#p7,#p8,#p9{
+	width: 110%;
+}
+#photohead{
+	position: absolute;
+	z-index: 1;
+	top: 35%;
+	font-family: f1;
+	color: white;
+	font-size: 6vw;
+	text-align: center;
+}
+@keyframes blink{
+	0%{
+		filter: brightness(50%);
+	}
+	50%{
+		filter: brightness(100%);
+	}
+	100%{
+		filter: brightness(50%);
+	}
+}
+#sec7{
+	width: 100%;
+	height: 45vw;
+	background-color: rgb(25,25,25);
+	color: white;
+}
+#sec7 p{
+	text-align: center;
+	font-size: 4vw;
+	font-family: f1;
+	width: 65vw;
+}
+#sec7 a{
+	text-decoration: none;
+	font-size: 2vw;
+	color: white;
+}
+html{
+	scroll-behavior: smooth;
+}
+@media only screen and (min-width:320px) and (max-width:1148px){
+			#sec3up{
+				margin-top: 200px;
+			}
+			#sec3down{
+				padding-bottom:100px ;
+			}
+}
